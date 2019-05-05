@@ -8,6 +8,11 @@ from main import solveSudoku
 from append import writeOnImage
 
 fileDir = os.path.dirname(os.path.abspath(__file__))
+if not os.path.exists(fileDir + "/outputs"):
+    os.makedirs(fileDir + "/outputs")
+
+if not os.path.exists(fileDir + "/sources"):
+    os.makedirs(fileDir + "/sources")
 
 sudokuIndex = ""
 if len(sys.argv) > 1:
